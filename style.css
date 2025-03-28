@@ -1,83 +1,107 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: monospace;
+    font-family: "Courier New", monospace;
 }
 
-body{
-    background-color: #43a047;
+body {
+    background-color: #2e7d32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.wrapper{
-    background-color: #fff;
-    width: 80vmin;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    padding: 40px 20px;
-    border-radius: 8px;
+.wrapper {
+    background-color: #ffffff;
+    width: 85vmin;
+    padding: 40px 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-label{
+label {
     display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
 }
 
-span{
+span {
     position: relative;
-    font-size: 22px;
-    bottom: -1px;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
-.opt-wrapper{
+.opt-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 20px;
-    gap: 10px;
+    gap: 12px;
 }
 
-button{
-    background-color: #43a047;
+button {
+    background-color: #388e3c;
     border: none;
-    border-radius: 5px;
-    padding: 5px;
-    color: #fff;
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-input[type="color"]{
+button:hover {
+    background-color: #2e7d32;
+    transform: scale(1.05);
+}
+
+input[type="color"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     background-color: transparent;
-    width: 70px;
+    width: 75px;
     height: 40px;
     border: none;
     cursor: pointer;
 }
 
-input[type="color"]::-webkit-color-swatch{
-    border-radius: 8px;
-    border: 4px solid #000;
-}
-input[type="color"]::-moz-color-swatch{
-    border-radius: 8px;
-    border: 4px solid #000;
+input[type="color"]::-webkit-color-swatch,
+input[type="color"]::-moz-color-swatch {
+    border-radius: 10px;
+    border: 3px solid #444;
 }
 
-.gridCol{
-    height: 1em;
-    width: 1em;
-    border: 1px solid #ddd;
-}
-
-.gridRow{
+.gridRow {
     display: flex;
+    justify-content: center;
 }
 
-@media only screen and (max-width: 768px){
-    .gridCol{
-        height: 0.8em;
-        width: 0.8em;
+.gridCol {
+    height: 1.2em;
+    width: 1.2em;
+    border: 1px solid #ccc;
+    transition: background 0.3s ease;
+}
+
+.gridCol:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        width: 95vmin;
+        padding: 30px 20px;
+    }
+
+    .gridCol {
+        height: 1em;
+        width: 1em;
     }
 }
